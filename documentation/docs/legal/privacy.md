@@ -52,8 +52,12 @@ their own privacy policies.
 
 Processing is based on your **consent** (Article 6(1)(a) GDPR). Analytics
 scripts do not load until you explicitly click "Accept" on the consent banner.
-You can withdraw consent at any time by clearing the `sc-analytics-consent`
-entry from your browser's local storage.
+Your choice is stored in a single `soroban-cookie-consent` entry in your
+browser's local storage, and every consent-gated feature on the site (including analytics
+scripts, search tracking, and funnel tracking) reads that same entry: accepting
+enables them all, rejecting disables them all. You can withdraw consent at any
+time by clearing the `soroban-cookie-consent` entry from your browser's local
+storage.
 
 ## Your rights
 
