@@ -22,6 +22,21 @@ Thank you for your interest in contributing! To ensure a smooth experience for b
 
 ### Rust Example Contracts: Style & Lint
 
+For every new or updated example, complete the
+[example origin checklist](documentation/docs/contributing/add-tested-example.md#example-origin-checklist)
+before merge:
+
+- [ ] Declare the crate's license in `examples/<example>/Cargo.toml`.
+- [ ] Add accurate SPDX license headers to new or modified Rust source files,
+  preserving any required upstream copyright and license notices.
+- [ ] Record an **Origin** section in `examples/<example>/README.md`: either
+  original work for this project, or adapted from a named public source with a
+  citation, revision/version, source license, and a summary of changes.
+
+For adapted material, verify the license permits the contribution and retain
+required attribution or NOTICE files. Flag uncertain compatibility for maintainers
+before merge. This checklist is a forward-looking requirement for contributions.
+
 The example Soroban contracts in [`examples/`](examples/) share a single style and
 lint configuration so local development matches CI exactly:
 
