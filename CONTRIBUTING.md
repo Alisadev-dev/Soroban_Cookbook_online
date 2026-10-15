@@ -49,6 +49,13 @@ These checks run in the `lint-contracts` CI job. Run them locally before opening
 All example crates in [`examples/`](examples/) are licensed under the repository's
 [MIT License](LICENSE). Example crates must not declare a different license.
 
+- **Required `license` field** — every example crate's `Cargo.toml` must set an
+  explicit `license` field in its `[package]` section so packaging and docs
+  tooling can read the license from the manifest:
+  ```toml
+  license = "MIT"
+  ```
+
 - **Exceptions** — a crate may only use a different license if a maintainer
   approves it in the PR and it is listed below with its rationale. There are
   currently **no approved exceptions**.

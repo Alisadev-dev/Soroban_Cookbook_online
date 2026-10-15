@@ -2,6 +2,7 @@
 name = "dutch-auction"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 description = "Soroban example demonstrating a time-decaying Dutch auction with linear price interpolation."
 keywords = ["soroban", "example", "dutch-auction"]
 
