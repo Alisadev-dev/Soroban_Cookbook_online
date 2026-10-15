@@ -200,6 +200,8 @@ source. The file documents the required columns.
 
 In your documentation page (`.md` or `.mdx`), reference the example naturally in code fences. The tested source in `examples/` is the source of truth; keep the two in sync.
 
+Pattern and security pages that ship contract code must also carry the shared unaudited notice. See the [Unaudited Example Notice Policy](./unaudited-example-notice.md) for when it is required and where to place it.
+
 ## CI integration
 
 The `test-examples` job in `.github/workflows/ci.yml` runs `./scripts/test-examples.sh` on every pull request and push to `main`, and reports which examples failed.
@@ -216,6 +218,7 @@ The same job also runs `scripts/check-example-readmes.sh`, which fails if any cr
 - [ ] `cargo test --manifest-path examples/<your-example>/Cargo.toml` exits 0
 - [ ] `<your-example>` is listed in `examples/Cargo.toml`
 - [ ] The documentation page references the same code
+- [ ] The documentation page shows `<UnauditedExampleNotice />` per the [notice policy](./unaudited-example-notice.md)
 - [ ] `examples/<your-example>/README.md` exists and follows the template above
 - [ ] `examples/README.md` lists the new crate
 - [ ] `examples/ORIGIN.md` has a row for the new crate
