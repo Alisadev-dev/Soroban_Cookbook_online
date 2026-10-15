@@ -192,6 +192,10 @@ Notes:
 Add a row for your crate to the table in [`examples/README.md`](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/blob/main/examples/README.md)
 so it is discoverable from the directory listing.
 
+Also add a row to [`examples/ORIGIN.md`](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/blob/main/examples/ORIGIN.md)
+recording whether the crate is `original` or `adapted` from a named public
+source. The file documents the required columns.
+
 ### 8. Link to the docs
 
 In your documentation page (`.md` or `.mdx`), reference the example naturally in code fences. The tested source in `examples/` is the source of truth; keep the two in sync.
@@ -214,6 +218,7 @@ The same job also runs `scripts/check-example-readmes.sh`, which fails if any cr
 - [ ] The documentation page references the same code
 - [ ] `examples/<your-example>/README.md` exists and follows the template above
 - [ ] `examples/README.md` lists the new crate
+- [ ] `examples/ORIGIN.md` has a row for the new crate
 - [ ] `./scripts/check-example-readmes.sh` passes
 
 ## Troubleshooting
