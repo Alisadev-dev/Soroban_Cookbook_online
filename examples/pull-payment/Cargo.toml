@@ -2,6 +2,7 @@
 name = "pull-payment"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 description = "Soroban example illustrating pull payments: credit a beneficiary, then let them withdraw, instead of pushing transfers on release."
 keywords = ["soroban", "example", "pull-payment", "payout"]
 

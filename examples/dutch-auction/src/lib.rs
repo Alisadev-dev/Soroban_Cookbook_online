@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 //! # Dutch Auction Example
 //!
 //! A time-decaying price auction contract demonstrating linear interpolation

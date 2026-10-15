@@ -59,6 +59,36 @@ These checks run in the `lint-contracts` CI job. Run them locally before opening
 
 ---
 
+### License Policy for Example Crates
+
+All example crates in [`examples/`](examples/) are licensed under the repository's
+[MIT License](LICENSE). Example crates must not declare a different license.
+
+- **Required `license` field** — every example crate's `Cargo.toml` must set an
+  explicit `license` field in its `[package]` section so packaging and docs
+  tooling can read the license from the manifest:
+  ```toml
+  license = "MIT"
+  ```
+- **SPDX headers** — every Rust source file under `examples/**/*.rs` must start
+  with an `SPDX-License-Identifier` header matching the crate's license. For MIT
+  examples the expected header is:
+  ```rust
+  // SPDX-License-Identifier: MIT
+  ```
+  All existing example sources already include this header.
+
+- **Exceptions** — a crate may only use a different license if a maintainer
+  approves it in the PR and it is listed below with its rationale. There are
+  currently **no approved exceptions**.
+- **`multisig-timelock-upgrade`** — previously declared `Apache-2.0`; it now
+  declares `MIT` in line with this policy.
+
+New example PRs should confirm the crate's `license` field follows this policy
+(see the checklist in the [pull request template](.github/pull_request_template.md)).
+
+---
+
 
 ### Why the Guide?
 We want to enable you to submit high-quality PRs with minimal back-and-forth. The guide provides clear expectations, automated check commands, and standardized practices.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 //! # Crowdfund
 //!
 //! A time-bounded crowdfund contract. A creator opens a campaign with a

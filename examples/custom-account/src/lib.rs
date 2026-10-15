@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 #![no_std]
 
 //! A minimal Soroban **custom account** contract.
