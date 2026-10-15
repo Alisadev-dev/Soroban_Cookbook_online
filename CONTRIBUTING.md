@@ -44,6 +44,22 @@ These checks run in the `lint-contracts` CI job. Run them locally before opening
 
 ---
 
+### License Policy for Example Crates
+
+All example crates in [`examples/`](examples/) are licensed under the repository's
+[MIT License](LICENSE). Example crates must not declare a different license.
+
+- **Exceptions** — a crate may only use a different license if a maintainer
+  approves it in the PR and it is listed below with its rationale. There are
+  currently **no approved exceptions**.
+- **`multisig-timelock-upgrade`** — previously declared `Apache-2.0`; it now
+  declares `MIT` in line with this policy.
+
+New example PRs should confirm the crate's `license` field follows this policy
+(see the checklist in the [pull request template](.github/pull_request_template.md)).
+
+---
+
 
 ### Why the Guide?
 We want to enable you to submit high-quality PRs with minimal back-and-forth. The guide provides clear expectations, automated check commands, and standardized practices.
