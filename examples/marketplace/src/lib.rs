@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 //! # Marketplace Example
 //!
 //! A minimal marketplace for NFTs (or any asset) that supports listing, buying, and cancelling.

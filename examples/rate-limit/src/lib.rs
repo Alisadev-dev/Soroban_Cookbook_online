@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 //! # Rate Limit
 //!
 //! A per-address action rate limiter enforced inside the contract.

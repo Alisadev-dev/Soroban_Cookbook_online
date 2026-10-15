@@ -55,6 +55,13 @@ All example crates in [`examples/`](examples/) are licensed under the repository
   ```toml
   license = "MIT"
   ```
+- **SPDX headers** — every Rust source file under `examples/**/*.rs` must start
+  with an `SPDX-License-Identifier` header matching the crate's license. For MIT
+  examples the expected header is:
+  ```rust
+  // SPDX-License-Identifier: MIT
+  ```
+  All existing example sources already include this header.
 
 - **Exceptions** — a crate may only use a different license if a maintainer
   approves it in the PR and it is listed below with its rationale. There are
