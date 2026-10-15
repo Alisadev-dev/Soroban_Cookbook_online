@@ -44,6 +44,7 @@ Copy the template below and replace `<your-example>` with your directory name:
 name = "<your-example>"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -70,6 +71,7 @@ lto = true
 Include the contract implementation **and** a `#[cfg(test)]` module with at least one test per public function. Use `env.mock_all_auths()` when your functions call `require_auth`.
 
 ```rust
+// SPDX-License-Identifier: MIT
 #![no_std]
 use soroban_sdk::{contract, contractimpl, Env};
 
@@ -141,6 +143,15 @@ GitHub *is* how they consume the cookbook. Use this template:
 - <Technique or guarantee 2>
 - <Technique or guarantee 3>
 
+## Origin
+
+<Choose and complete one statement before submitting:>
+
+- Original work contributed to Soroban Cookbook.
+- Adapted from [<source/project name>](<public source URL>), revision/version
+  <commit or release>, licensed under <SPDX identifier>. Changes: <summary>.
+  Required upstream notices: <file paths or retained source headers>.
+
 ## Build
 
 ```bash
@@ -210,8 +221,31 @@ If your PR introduces a new example, CI will automatically pick it up because th
 
 The same job also runs `scripts/check-example-readmes.sh`, which fails if any crate with a `Cargo.toml` has no `README.md`. Both steps are advisory (`continue-on-error`), so they report gaps without blocking the merge.
 
+## Example origin checklist
+
+Complete this checklist for every new or updated example before merge. Record
+provenance in `examples/<your-example>/README.md` under **Origin**; use the
+template above, removing the unused option and filling in every placeholder.
+
+- [ ] The crate's `Cargo.toml` declares a `license` SPDX expression (normally
+  `MIT` for original project examples); it accurately covers the contributed code.
+- [ ] New or modified Rust source files have accurate `SPDX-License-Identifier`
+  headers (for example `// SPDX-License-Identifier: MIT` for original MIT code).
+- [ ] The README explicitly states whether the example is original or adapted.
+- [ ] For adaptations, the README names and links each public source, records its
+  revision or version and license, and summarizes the changes made.
+- [ ] Required upstream copyright, attribution, license text, and NOTICE files
+  are preserved in the crate as required by the source license. Do not relabel
+  third-party code as MIT without permission; resolve compatibility questions
+  with maintainers before merge.
+
+Link the crate's Origin section in the PR so reviewers can verify it. This
+process documents incoming contributions and makes no claim about the origin of
+existing examples.
+
 ## Checklist before submitting
 
+- [ ] The [example origin checklist](#example-origin-checklist) is complete
 - [ ] `examples/<your-example>/Cargo.toml` exists and lists `soroban-sdk` as a dependency
 - [ ] `examples/<your-example>/src/lib.rs` compiles with `cargo build`
 - [ ] Every public function has at least one test in `#[cfg(test)]`
