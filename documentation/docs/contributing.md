@@ -120,6 +120,10 @@ Contract examples should be minimal, focused, and well-documented.
 - **Storage:** Use `examples/` for standalone Rust projects (if applicable).
 - **Inline Docs:** Explain complex logic within the Rust code snippets using comments.
 - **Best Practices:** Follow [Soroban Best Practices](https://developers.stellar.org/docs/build/smart-contracts/example-contracts).
+- **Origin and licensing:** For every new or updated example, complete the
+  [example origin checklist](./contributing/add-tested-example.md#example-origin-checklist)
+  before merge. Record original/adapted status and source citations in the crate
+  README, declare its Cargo license, and include accurate SPDX source headers.
 
 ### C. Fixes & Improvements
 
