@@ -17,6 +17,20 @@ through the website. Contact us by opening an issue on
 
 ## What we collect
 
+### Essential browser storage
+
+The site stores the following entries in your browser to deliver features you
+use. They are essential, are not consent-gated, and are not sent to analytics
+providers:
+
+| Storage | Type | Purpose | Essential? |
+|---------|------|---------|------------|
+| Theme preference (`theme` / color mode keys) | `localStorage` | Remember light/dark mode | Yes (functional) |
+| CSRF token (`soroban-csrf-token`) | `sessionStorage` | Protect newsletter form submissions | Yes (security) |
+
+The CSRF token lasts for the browser session. The theme preference is kept
+until you clear site data.
+
 ### Optional analytics (consent-gated)
 
 When you accept the consent banner, we load Google Analytics 4 (GA4) and,
