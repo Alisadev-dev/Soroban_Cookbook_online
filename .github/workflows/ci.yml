@@ -381,6 +381,9 @@ jobs:
       - name: Forbid new unwrap/expect outside #[cfg(test)]
         run: bash scripts/forbid-unwrap.sh
 
+      - name: Check example license fields and SPDX headers
+        run: bash scripts/check-example-licenses.sh
+
   e2e-console:
     name: Browser Console Audit
     runs-on: ubuntu-latest

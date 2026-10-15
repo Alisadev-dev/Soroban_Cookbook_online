@@ -203,9 +203,15 @@ Notes:
 Add a row for your crate to the table in [`examples/README.md`](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/blob/main/examples/README.md)
 so it is discoverable from the directory listing.
 
+Also add a row to [`examples/ORIGIN.md`](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/blob/main/examples/ORIGIN.md)
+recording whether the crate is `original` or `adapted` from a named public
+source. The file documents the required columns.
+
 ### 8. Link to the docs
 
 In your documentation page (`.md` or `.mdx`), reference the example naturally in code fences. The tested source in `examples/` is the source of truth; keep the two in sync.
+
+Pattern and security pages that ship contract code must also carry the shared unaudited notice. See the [Unaudited Example Notice Policy](./unaudited-example-notice.md) for when it is required and where to place it.
 
 ## CI integration
 
@@ -246,8 +252,10 @@ existing examples.
 - [ ] `cargo test --manifest-path examples/<your-example>/Cargo.toml` exits 0
 - [ ] `<your-example>` is listed in `examples/Cargo.toml`
 - [ ] The documentation page references the same code
+- [ ] The documentation page shows `<UnauditedExampleNotice />` per the [notice policy](./unaudited-example-notice.md)
 - [ ] `examples/<your-example>/README.md` exists and follows the template above
 - [ ] `examples/README.md` lists the new crate
+- [ ] `examples/ORIGIN.md` has a row for the new crate
 - [ ] `./scripts/check-example-readmes.sh` passes
 
 ## Troubleshooting

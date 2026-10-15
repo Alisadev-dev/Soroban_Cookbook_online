@@ -165,6 +165,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'contributing',
         'contributing/add-tested-example',
+        'contributing/unaudited-example-notice',
         'contributing/soroban-test-snapshots',
         'contributing/analytics-events',
         'contributing/versioning-strategy',
