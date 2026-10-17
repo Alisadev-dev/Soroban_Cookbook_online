@@ -34,3 +34,25 @@ reporting, and experiment exposure. The banner does not set or clear that
 entry, and removing only that entry does not change the banner's saved choice.
 To withdraw both, reject in the banner and also remove `sc-analytics-consent`
 via browser storage settings (or clear all site data).
+
+## Error monitoring (Sentry, when enabled)
+
+When the deployment configures `SENTRY_DSN`, the site initializes Sentry
+error monitoring independently of the analytics consent banner (see
+`documentation/src/theme/Root.tsx`). Sentry is treated as essential
+error-monitoring traffic under the operator's legitimate interest in operating
+a reliable documentation site — it is **not** consent-gated like GA4 or
+Clarity. When `SENTRY_DSN` is absent (for example local development), Sentry
+is not initialized.
+
+Error reports may include request URLs, release/environment metadata
+(`SENTRY_ENVIRONMENT`, `SENTRY_RELEASE`), and diagnostic context needed to
+reproduce the failure. The integration strips selected sensitive URL query
+parameters (`token`, `key`, `secret`, `password`, `auth`) before sending
+events; this scrubbing does not guarantee every personal or sensitive value
+is removed, so avoid putting secrets in URLs.
+
+Retention and contact details follow the operator's Sentry project settings.
+<!-- PLACEHOLDER: State the operator's Sentry data-retention period and the privacy contact for Sentry-related requests once known. -->
+See the [canonical Privacy Policy](/privacy) (Error monitoring, Third-party
+services, and Data retention rows) for the maintained disclosure.
